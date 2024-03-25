@@ -9,7 +9,7 @@ class sabirac:
         if self.rezultat >= self.maxVal:
             self.rezultat = 0
         return self.rezultat
-
+ 
     
 
 
