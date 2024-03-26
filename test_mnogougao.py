@@ -4,12 +4,10 @@ from mnogougao import *
 
 @pytest.mark.parametrize("a", np.linspace(-1, 1, 20)  )
 def test_kvadrat(a):
-    try:
-        kvadrat = Kvadrat(a)
-        assert kvadrat.obim() == 4*a
-        assert kvadrat.povrsina() == a**2
-    except ValueError as e:
-        assert a < 0
+    kvadrat = Kvadrat(a)
+    assert kvadrat.obim() == 4*a
+    assert kvadrat.povrsina() == a**2
+
 
 
 @pytest.mark.parametrize("a, b", [ (a,b) for a in np.linspace(0, 1, 20) for b in (0, 1, 20) ] )
