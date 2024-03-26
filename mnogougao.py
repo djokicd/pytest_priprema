@@ -43,6 +43,8 @@ class Mnogougao:
 
 class Kvadrat(Mnogougao):
     def __init__(self, a):
+        if a <= 0:
+            raise ValueError("Duzina stranice mora biti pozitivna.")
         self.vertices = [(0, 0), (a, 0), (a, a), (0, a)]
 
 class Trougao(Mnogougao):
